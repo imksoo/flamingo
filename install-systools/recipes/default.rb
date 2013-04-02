@@ -20,3 +20,5 @@
 yum_package "tmux"
 yum_package "git"
 yum_package "zsh"
+yum_package "vim"
+

@@ -1,0 +1,12 @@
+<%
+ recipes = []
+ Dir.entries("/var/chef/cookbooks/").select{|d| /^[^\.]/ =~ d}.sort.each { |d|
+  recipes.push("\"recipe[#{d}]\"")
+ }
+ run_list = recipes.join(",")
+%>{
+ "run_list": [
+  <%= run_list %>
+ ]
+}
+

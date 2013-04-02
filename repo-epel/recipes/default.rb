@@ -26,10 +26,7 @@ cookbook_file "#{chef_tmpdir}/#{epel_rpmfile}"
 yum_package "epel-release" do
 	action :install
 	source "#{chef_tmpdir}/#{epel_rpmfile}"
-end
-
-bash "remove-rpmfile" do
-	code <<-EOH
-		rm -f #{chef_tmpdir}/#{epel_rpmfile}
-	EOH
+	only_if do
+		0 == system("rpm -q epel-release")
+	end
 end
