@@ -1,10 +1,7 @@
-name             'zabbix-server-sia'
+name             'httpd'
 maintainer       'Kiniro Minato / @imksoo'
 maintainer_email 'kirino.minato@gmail.com'
 license          'Apache 2.0'
-description      'Installs/Configures zabbix-server-sia'
+description      'Installs/Configures httpd'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
-depends          'mysql-server-5.6'
-depends          'php'
-depends          'httpd'

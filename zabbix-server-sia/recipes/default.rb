@@ -98,6 +98,20 @@ template "/etc/zabbix/zabbix_server.conf" do
 	source "zabbix_server.conf.erb"
 end
 
+template "/etc/zabbix/web/zabbix.conf.php" do
+	mode "644"
+	owner "apache"
+	group "apache"
+	source "zabbix.conf.php.erb"
+end
+
+template "/etc/zabbix/web/maintenance.inc.php" do
+	mode "644"
+	owner "root"
+	group "root"
+	source "maintenance.inc.php.erb"
+end
+
 script "create-zabbix-db" do
 	action :nothing
 	interpreter "bash"

@@ -37,13 +37,13 @@ default["zabbix_server"]["disable_housekeeping"] = 0 #0:enable, 1:disable
 default["zabbix_server"]["sender_frequency"] = 30 #sec
 
 default["zabbix_server"]["start_db_syncers"] = 4
-default["zabbix_server"]["cache_size"] = 8*4 #default:8MB
+default["zabbix_server"]["cache_size"] = 8*4 #MB, default:8MB
 default["zabbix_server"]["cache_update_frequency"] = 60 #sec
-default["zabbix_server"]["history_cache_size"] = 8*4 #default:8MB
-default["zabbix_server"]["history_text_cache_size"] = 16*4 #default:16MB
-default["zabbix_server"]["trend_cache_size"] = 4*4 #default:4MB
+default["zabbix_server"]["history_cache_size"] = 8*4 #MB, default:8MB
+default["zabbix_server"]["history_text_cache_size"] = 16*4 #MB, default:16MB
+default["zabbix_server"]["trend_cache_size"] = 4*4 #MB, default:4MB
 
-default["zabbix_server"]["node_no_events"] = 0
+default["zabbix_server"]["node_no_events"] = 0 #default:0
 default["zabbix_server"]["node_no_history"] = 0
 
 default["zabbix_server"]["timeout"] = 3 #sec
