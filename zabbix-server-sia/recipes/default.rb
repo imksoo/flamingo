@@ -83,6 +83,8 @@ zabbix_package_source = []
 zabbix_packages.each { |pkg| zabbix_package_source.push("#{chef_tempdir}/#{pkg}") }
 
 execute "install-zabbix-server" do
+	notifies :stop, "service[zabbix-server]", :immediate
+	notifies :stop, "service[httpd]", :immediate
 	command "yum install -y #{zabbix_package_source.join(' ')}"
 	notifies :run, "script[create-zabbix-db]", :immediate
 	notifies :run, "script[create-zabbix-db-schema]", :immediate

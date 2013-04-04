@@ -10,7 +10,7 @@ default["zabbix_agent"]["enable_remote_commands"] = nil #default:0(not allowed),
 default["zabbix_agent"]["log_remote_commands"] = nil #default:0(disabled), 1:(enabled)
 
 default["zabbix_agent"]["server"] = "10.3.12.105" #comma delimited IP addresses
-default["zabbix_agent"]["server_active"] = "10.3.12.105" #comma delimited IP:port list
+default["zabbix_agent"]["server_active"] = nil #comma delimited IP:port list
 
 default["zabbix_agent"]["listen_port"] = 10050 #default:10050
 default["zabbix_agent"]["listen_ip"] = "0.0.0.0" #default:0.0.0.0
@@ -26,7 +26,7 @@ default["zabbix_agent"]["allow_root"] = 0 #default:0(do not allow), 1(allow)
 
 default["zabbix_agent"]["timeout"] = 3 #sec, default:3
 
-default["zabbix_agent"]["include"] = ["/etc/zabbix/zabbix_agent.d/"] 
+default["zabbix_agent"]["include"] = ["/etc/zabbix/zabbix_agentd.d/"] 
 
 default["zabbix_agent"]["unsafe_user_parameters"] = 0 #default:0(do not allow), 1(allow)
 default["zabbix_agent"]["user_parameter"] = [] #Format: "<key>,<shell command>"

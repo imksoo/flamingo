@@ -68,3 +68,16 @@ script "mysql-secure-installation" do
 	EOH
 end
 
+template "/etc/zabbix/zabbix_agentd.d/userparameter_mysql.conf" do
+	mode "644"
+	owner "root"
+	group "root"
+	source "userparameter_mysql.conf.erb"
+end
+
+template "/etc/zabbix/zabbix-agentd-my.cnf" do
+	mode "640"
+	owner "root"
+	group "zabbix"
+	source "zabbix-agentd-my.cnf.erb"
+end

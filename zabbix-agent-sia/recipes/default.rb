@@ -54,6 +54,7 @@ end
 directory "/etc/zabbix/zabbix_agentd.d"
 
 service "zabbix-agent" do
+	supports :restart=>true
 	action [:enable, :start]
 end
 
