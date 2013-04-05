@@ -6,10 +6,10 @@ default["zabbix_agent"]["debug_level"] = 3
 
 default["zabbix_agent"]["source_ip"] = nil
 
-default["zabbix_agent"]["enable_remote_commands"] = nil #default:0(not allowed), 1:(allowed)
-default["zabbix_agent"]["log_remote_commands"] = nil #default:0(disabled), 1:(enabled)
+default["zabbix_agent"]["enable_remote_commands"] = 1 #default:0(not allowed), 1:(allowed)
+default["zabbix_agent"]["log_remote_commands"] = 1 #default:0(disabled), 1:(enabled)
 
-default["zabbix_agent"]["server"] = "10.3.12.105" #comma delimited IP addresses
+default["zabbix_agent"]["server"] = "10.3.12.105,127.0.0.1" #comma delimited IP addresses
 default["zabbix_agent"]["server_active"] = nil #comma delimited IP:port list
 
 default["zabbix_agent"]["listen_port"] = 10050 #default:10050

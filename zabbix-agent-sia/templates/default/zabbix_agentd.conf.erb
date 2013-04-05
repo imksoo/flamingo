@@ -80,7 +80,7 @@ LogFileSize=<%= node[:zabbix_agent][:log_file_size] %>
 # Default:
 # LogRemoteCommands=0
 
-<%= "LogRemoteCommands=#{node.zabbix_agent.log_remote_command}" if node[:zabbix_agent][:log_remote_command] %>
+<%= "LogRemoteCommands=#{node.zabbix_agent.log_remote_commands}" if node[:zabbix_agent][:log_remote_commands] %>
 
 ##### Passive checks related
 
