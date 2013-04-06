@@ -25,10 +25,12 @@ template "/etc/ntp.conf" do
 	owner "root"
 	group "root"
 	source "ntp.conf.erb"
+	notifies :restart, "service[ntpd]", :immediate
 end
 
 directory "/etc/ntp"
 
 service "ntpd" do
+	supports :restart=>true
 	action [:enable, :start]
 end
