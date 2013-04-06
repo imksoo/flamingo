@@ -37,7 +37,7 @@ zabbix_packages.each { |pkg|
 zabbix_package_source = []
 zabbix_packages.each { |pkg| zabbix_package_source.push("#{chef_tempdir}/#{pkg}") }
 
-execute "install-zabbix-server" do
+execute "install-zabbix-agent" do
 	notifies :stop, "service[zabbix-agent]", :immediate
 	command "yum install -y #{zabbix_package_source.join(' ')}"
 	not_if "rpm -q zabbix-agent"
