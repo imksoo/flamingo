@@ -28,7 +28,7 @@ default["zabbix_server"]["java_gateway_port"] = 10052
 default["zabbix_server"]["start_java_pollers"] = 0
 
 default["zabbix_server"]["snmp_trapper_file"] = "/var/log/snmptt/snmptt.log"
-default["zabbix_server"]["start_snmp_trapper"] = 0
+default["zabbix_server"]["start_snmp_trapper"] = 1
 
 default["zabbix_server"]["housekeeping_frequency"] = 1 #hour
 default["zabbix_server"]["max_housekeeping_delete"] = 500

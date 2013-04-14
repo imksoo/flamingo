@@ -17,6 +17,13 @@
 # limitations under the License.
 #
 
+template "/etc/logrotate.conf" do
+	mode 644
+	owner "root"
+	group "root"
+	source "logrotate.conf.erb"
+end
+
 directory "/etc/logrotate.d" do
 	mode 755
 	owner "root"
