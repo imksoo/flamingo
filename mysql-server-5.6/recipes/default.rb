@@ -81,3 +81,10 @@ template "/etc/zabbix/zabbix-agentd-my.cnf" do
 	group "zabbix"
 	source "zabbix-agentd-my.cnf.erb"
 end
+
+template "/etc/my.cnf" do
+	mode "644"
+	owner "root"
+	group "root"
+	source "my.cnf.erb"
+end
