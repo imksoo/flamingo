@@ -23,4 +23,4 @@ yum_package "zsh"
 yum_package "vim"
 yum_package "man"
 yum_package "yum-utils"
-
+yum_package "bind-utils"
