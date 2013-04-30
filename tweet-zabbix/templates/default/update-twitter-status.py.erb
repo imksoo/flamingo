@@ -9,5 +9,7 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-api.update_status("@imksoo "+sys.argv[2][0:120])
+mentions = "@imksoo "
+tweet_len = 140 - len(mentions) - 2
+api.update_status(mentions + sys.argv[2][0:tweet_len])
 
