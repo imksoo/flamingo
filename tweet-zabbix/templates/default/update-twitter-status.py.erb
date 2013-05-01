@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import sys
+import datetime
 import tweepy
 
 from twitter_keys import *
@@ -9,7 +10,12 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-mentions = "@imksoo "
-tweet_len = 140 - len(mentions) - 2
-api.update_status(mentions + sys.argv[2][0:tweet_len])
+now = datetime.datetime.now()
+time = now.strftime("%H:%M:%S")
+
+msg = sys.argv[2]
+msg = msg.replace("=PROBLEM", "=NG", 1)
+
+status = "%(mention)s %(time)s %(message)s" % {"mention": sys.argv[1], "time": time, "message": msg}
+api.update_status(status[0:138])
 
