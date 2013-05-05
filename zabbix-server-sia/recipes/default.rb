@@ -60,15 +60,24 @@ zabbix_packages =  [
 	"unixODBC-2.2.14-12.el6_3.x86_64.rpm",
 	"vlgothic-fonts-common-20091202-2.el6.noarch.rpm",
 	"vlgothic-p-fonts-20091202-2.el6.noarch.rpm",
-	"zabbix-2.0.5-1.el6.x86_64.rpm",
-	"zabbix-agent-2.0.5-1.el6.x86_64.rpm",
-	"zabbix-get-2.0.5-1.el6.x86_64.rpm",
-	"zabbix-sender-2.0.5-1.el6.x86_64.rpm",
-	"zabbix-server-2.0.5-1.el6.x86_64.rpm",
-	"zabbix-server-mysql-2.0.5-1.el6.x86_64.rpm",
-	"zabbix-web-2.0.5-1.el6.noarch.rpm",
-	"zabbix-web-japanese-2.0.5-1.el6.noarch.rpm",
-	"zabbix-web-mysql-2.0.5-1.el6.noarch.rpm"
+#	"zabbix-2.0.5-1.el6.x86_64.rpm",
+#	"zabbix-agent-2.0.5-1.el6.x86_64.rpm",
+#	"zabbix-get-2.0.5-1.el6.x86_64.rpm",
+#	"zabbix-sender-2.0.5-1.el6.x86_64.rpm",
+#	"zabbix-server-2.0.5-1.el6.x86_64.rpm",
+#	"zabbix-server-mysql-2.0.5-1.el6.x86_64.rpm",
+#	"zabbix-web-2.0.5-1.el6.noarch.rpm",
+#	"zabbix-web-japanese-2.0.5-1.el6.noarch.rpm",
+#	"zabbix-web-mysql-2.0.5-1.el6.noarch.rpm"
+	"zabbix-2.0.6-1.el6.x86_64.rpm",
+	"zabbix-agent-2.0.6-1.el6.x86_64.rpm",
+	"zabbix-get-2.0.6-1.el6.x86_64.rpm",
+	"zabbix-sender-2.0.6-1.el6.x86_64.rpm",
+	"zabbix-server-2.0.6-1.el6.x86_64.rpm",
+	"zabbix-server-mysql-2.0.6-1.el6.x86_64.rpm",
+	"zabbix-web-2.0.6-1.el6.noarch.rpm",
+	"zabbix-web-japanese-2.0.6-1.el6.noarch.rpm",
+	"zabbix-web-mysql-2.0.6-1.el6.noarch.rpm"
 ]
 
 directory "#{chef_tempdir}"
