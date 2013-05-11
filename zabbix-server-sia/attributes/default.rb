@@ -19,9 +19,9 @@ default["zabbix_server"]["start_pollers"] = 5
 default["zabbix_server"]["start_ipmi_pollers"] = 0
 default["zabbix_server"]["start_poller_unreachable"] = 1
 default["zabbix_server"]["start_trappers"] = 5
-default["zabbix_server"]["start_pingers"] = 1
-default["zabbix_server"]["start_discoverers"] = 1
-default["zabbix_server"]["start_http_pollers"] = 1
+default["zabbix_server"]["start_pingers"] = 4 #default:1
+default["zabbix_server"]["start_discoverers"] = 4 #default:1
+default["zabbix_server"]["start_http_pollers"] = 4 #default:1
 
 default["zabbix_server"]["java_gateway"] = nil
 default["zabbix_server"]["java_gateway_port"] = 10052
@@ -31,7 +31,7 @@ default["zabbix_server"]["snmp_trapper_file"] = "/var/log/snmptt/snmptt.log"
 default["zabbix_server"]["start_snmp_trapper"] = 1
 
 default["zabbix_server"]["housekeeping_frequency"] = 1 #hour
-default["zabbix_server"]["max_housekeeping_delete"] = 500
+default["zabbix_server"]["max_housekeeping_delete"] = 0 #default:500
 default["zabbix_server"]["disable_housekeeping"] = 0 #0:enable, 1:disable
 
 default["zabbix_server"]["sender_frequency"] = 30 #sec
@@ -66,5 +66,5 @@ default["zabbix_server"]["tmp_dir"] = "/tmp"
 default["zabbix_server"]["include"] = nil
 
 default["zabbix_server"]["start_proxy_pollers"] = 1
-default["zabbix_server"]["proxy_config_frequency"] = 3600 #sec
+default["zabbix_server"]["proxy_config_frequency"] = 300 #sec, defualt:3600
 default["zabbix_server"]["proxy_data_frequency"] = 1 #sec
