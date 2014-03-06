@@ -24,7 +24,7 @@ default["zabbix_agent"]["max_lines_per_second"] = 100 #default:100
 
 default["zabbix_agent"]["allow_root"] = 0 #default:0(do not allow), 1(allow)
 
-default["zabbix_agent"]["timeout"] = 3 #sec, default:3
+default["zabbix_agent"]["timeout"] = 15 #sec, default:3
 
 default["zabbix_agent"]["include"] = ["/etc/zabbix/zabbix_agentd.d/"] 
 

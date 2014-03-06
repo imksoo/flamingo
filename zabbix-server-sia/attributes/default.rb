@@ -46,7 +46,7 @@ default["zabbix_server"]["trend_cache_size"] = 4*4 #MB, default:4MB
 default["zabbix_server"]["node_no_events"] = 0 #default:0
 default["zabbix_server"]["node_no_history"] = 0
 
-default["zabbix_server"]["timeout"] = 3 #sec
+default["zabbix_server"]["timeout"] = 15 #sec, default=3
 default["zabbix_server"]["trapper_timeout"] = 300 #sec
 default["zabbix_server"]["unavailable_delay"] = 60 #sec
 default["zabbix_server"]["unreachable_delay"] = 15 #sec

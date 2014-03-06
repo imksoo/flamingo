@@ -13,9 +13,11 @@ api = tweepy.API(auth)
 now = datetime.datetime.now()
 time = now.strftime("%H:%M:%S")
 
-msg = sys.argv[2]
-msg = msg.replace("=PROBLEM", "=NG", 1)
+mention = sys.argv[1]
+message = sys.argv[2]
+message = message.replace("=PROBLEM", "=NG", 1)
 
-status = "%(mention)s %(time)s %(message)s" % {"mention": sys.argv[1], "time": time, "message": msg}
+status = "%(mention)s %(time)s %(message)s" % {"mention": mention, "time": time, "message": message}
 api.update_status(status[0:138])
 
+sys.exit(0)

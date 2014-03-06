@@ -88,3 +88,5 @@ template "/etc/my.cnf" do
 	group "root"
 	source "my.cnf.erb"
 end
+
+package "innnotop"
